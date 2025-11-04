@@ -1,54 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>MischaHikes</title>
-    <meta name="comp1800 template" content="My 1800 App">
-    <link rel="icon" href="/images/hiking-boot.png">
+    <meta name="comp1800 template" content="My 1800 App" />
+    <link rel="icon" href="/images/hiking-boot.png" />
 
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Web Components for shared navbar and footer layout -->
     <script type="module" src="/src/components/site-navbar.js"></script>
     <script type="module" src="/src/components/site-footer.js"></script>
-</head>
+    <link rel="stylesheet" href="./src/styles/style.css" />
+  </head>
 
-<body>
+  <body>
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
 
     <!-- our own navbar goes here -->
-     <site-navbar></site-navbar>
+    <site-navbar></site-navbar>
 
     <!-- Main content goes here -->
     <!-- This is the welcome on the landing page, with a login/signup button -->
     <div class="container">
-        <div class=" px-4 py-5 my-5 text-center">
-            <img class="d-block mx-auto mb-4" src="/images/hiking-boot.png" alt="" width="72" height="72">
-            <h1 class="display-5 fw-bold">Welcome to MischaHikes, <span id="name-goes-here">my friend!</span></h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Join a community of hikers looking for new places to explore.</p>
-                <h2>The view is better, together.</h2>
-                <div class="d-grid justify-content-sm-center">
-                    <!-- Make this button clickable, using onclick event listener -->
-                    <button onclick="window.location.href='login.html'" type="button"
-                        class="btn btn-success btn-lg">Login/Signup</button>
-                </div>
-            </div>
+      <div class="px-4 py-5 my-5 text-center">
+        <img
+          class="d-block mx-auto mb-4"
+          src="/images/hiking-boot.png"
+          alt=""
+          width="72"
+          height="72" />
+        <h1 class="display-5 fw-bold">
+          Welcome to MischaHikes, <span id="name-goes-here">my friend!</span>
+        </h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            Join a community of hikers looking for new places to explore.
+          </p>
+          <h2>The view is better, together.</h2>
+          <div class="d-grid justify-content-sm-center">
+            <!-- Make this button clickable, using onclick event listener -->
+            <button
+              onclick="window.location.href='login.html'"
+              type="button"
+              class="btn btn-success btn-lg">
+              Login/Signup
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
+    <div class="container-fluid bg-light text-dark p-5">
+      <h1>Popular Hikes</h1>
+      <div id="hikes-go-here" class="row"></div>
+    </div>
+
+    <template id="hikeCardTemplate">
+      <div class="col">
+        <div class="card">
+          <img class="card-img-top card-image" src="..." alt="Hike Image" />
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <p>Length: <span class="card-length"></span> km</p>
+            <p>Time: <span class="card-time"></span> minutes</p>
+            <p>Time: <span class="card-time"></span> minutes</p>
+            <a class="btn btn-primary read-more" href="#">Read More</a>
+          </div>
+        </div>
+      </div>
+    </template>
+
     <!-- our own footer goes here -->
-     <site-footer></site-footer>
+    <site-footer></site-footer>
 
     <!---------------------------------------------->
     <!-- Your own JavaScript scripts go here      -->
     <!---------------------------------------------->
     <script type="module" src="/src/app.js"></script>
-
-</body>
-
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
