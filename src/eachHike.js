@@ -55,7 +55,6 @@ function saveHikeDocumentIDAndRedirect() {
 }
 
 async function populateReviews() {
-  console.log("test");
   const hikeCardTemplate = document.getElementById("reviewCardTemplate");
   const hikeCardGroup = document.getElementById("reviewCardGroup");
 

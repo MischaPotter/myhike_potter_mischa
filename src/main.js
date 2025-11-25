@@ -97,9 +97,9 @@ async function displayCardsDynamically(userId, bookmarks) {
       newcard.querySelector(".card-image").src = `./images/${hike.code}.jpg`;
 
       // Add the link with the document ID
-      newcard.querySelector(".read-more").href = `eachHike.html?docID=${doc.id}`;
-
       const hikeDocID = docSnap.id;
+      newcard.querySelector(".read-more").href = `eachHike.html?docID=${hikeDocID}`;
+
       const icon = newcard.querySelector("i.material-icons");
 
       // Give this icon a unique id based on the hike ID
